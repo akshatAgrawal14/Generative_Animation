@@ -1,0 +1,165 @@
+let triUp, triUp_final,triDown, triDown_final,triLeft,triRight;
+
+function setup() {
+  createCanvas(1000, 1000);
+  triUp=700;
+  triUp_final=500;
+  triDown=0;
+  triLeft=0;
+  triRight=0;
+}
+
+
+
+function draw() {
+  background(10,10,10);
+  
+  noStroke();
+  
+  fill(30,30,30);
+  quad(150,0,250,1000,750,1000,850,0);
+  triangle(150,0,250,1000,100,400);
+  triangle(750,1000,850,0,900,400);
+  
+  
+  fill(179, 0, 0);
+  ellipse(500,250,450,650);
+  ellipse(500,650,300,400);
+  ellipse(500,950,280,300);
+  
+  
+  //legs left
+  quad(385,530,220,130,190,200);
+  quad(220,130,190,200, -60,110,20,-30);
+  
+  quad(385,530,200,300,190,350);
+  quad(200,300,190,350, 0,380,0,290);
+  
+  quad(385,530,200,450,190,500);
+  quad(200,450,190,500, 0,600,0,500);
+  
+  quad(385,530,170,610,200,680);
+  quad(170,610,200,680, 10,1100,-10,850);
+  
+  
+  //legs right
+  quad(615,530,780,130,810,200);
+  quad(780,130,810,200, 1060,110,980,-30);
+  
+  quad(615,530,800,300,810,350);
+  quad(800,300,810,350, 1000,380,1000,290);
+  
+  quad(615,530,800,450,810,500);
+  quad(800,450,810,500, 1000,600,1000,500);
+  
+  quad(615,530,830,610,800,680);
+  quad(830,610,800,680, 990,1100,1010,850);
+  
+  
+
+  fill(30,30,30);
+  ellipse(500,1000,250,300);
+  
+  
+  //skull eyes nose 
+  /*
+  fill(140,0,0);
+  quad(400,250,435,350,430,450,390,365);
+  quad(600,250,565,350,570,450,610,365);
+  quad(500,470,520,550,500,630,480,550);
+*/
+  
+
+
+
+  //triangles
+  fill(180,180,180);
+
+
+  /* was trying animation but tough
+  triangle(410+triLeft,1000,470+triRight/10,1000,440,triUp);
+  triangle(530+triLeft/10,1000,590+triRight,1000,560,triUp);
+  triangle(470+triLeft,0,530+triRight,0,500,300+triDown);
+  triangle(220+triLeft,0,280+triRight,0,350,200+triDown);
+  triangle(720+triLeft,0,780+triRight,0,650,200+triDown);
+
+
+  let easing = 0.099; 
+  
+  triUp=lerp(triUp,triUp_final, easing);
+  triDown=triDown+1/2;
+  triLeft=triLeft-1/10;
+  triRight=triRight+1/10;
+  */
+  
+
+  //try with mouse hover interaction
+  triangle(410-mouseY/10,1000,470+mouseY/40,1000,440-mouseY/30,700-mouseY/7);
+  triangle(530-mouseY/40,1000,590+mouseY/10,1000,560+mouseY/30,700-mouseY/7);
+  triangle(470-mouseY/8,0,530+mouseY/8,0,500,300+mouseY/1.5);
+  triangle(220-mouseY/10,0,280+mouseY/5,0,350-mouseY/20,200+mouseY/1.3);
+  triangle(720-mouseY/5,0,780+mouseY/10,0,650+mouseY/20,200+mouseY/1.3);
+
+  triangle(100,mouseY/10,200,mouseY/5,400,mouseY/8);
+
+
+  //face dark red coming on top
+  fill(140,0,0);
+  triangle(0,1000,1000,1000,500,1000-mouseY/10);
+  quad(0,mouseY/2,0,0,500,0,500,mouseY/1.7);
+  quad(1000,mouseY/2,1000,0,500,0,500,mouseY/1.7);
+  
+  fill(180,180,180);
+  triangle(200,mouseY/8,100,mouseY/4,400,mouseY/3);
+  triangle(800,mouseY/8,900,mouseY/4,600,mouseY/3);
+
+
+  fill(179, 0, 0);
+  triangle(200,0,800,0,500,mouseY/3);
+
+  fill(30, 30, 30);
+  triangle(250,0,750,0,500,mouseY/4);
+
+  //drawGrid();
+}
+
+
+//Ignore Below Code
+//Function to draw a grid in the background
+function drawGrid() {
+  stroke(50);
+
+  //find number of segmentation first
+  let segX = (width / 100) * 10;
+  let segY = (height / 100) * 10;
+
+  //find width of one segment
+  let xW = width / segX;
+  let yW = height / segY;
+
+  //draw Columns - loop
+  for (let i = 0; i < segX; i++) {
+    //change line stroke weight
+    strokeWeight(0.4);
+
+    //change stroke width on every 10th line
+    if (i % 10 == 0) {
+      strokeWeight(2);
+    }
+    line(xW * i, 0, yW * i, height);
+  }
+
+  //draw rows - loop
+  for (let i = 0; i < segY; i++) {
+    //change line stroke weight
+    strokeWeight(0.4);
+
+    //change stroke width on every 10th line
+    if (i % 10 == 0) {
+      strokeWeight(2);
+    }
+    line(0, yW * i, width, yW * i);
+  }
+
+  stroke(255);
+}
