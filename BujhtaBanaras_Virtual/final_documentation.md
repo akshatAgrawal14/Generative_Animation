@@ -16,7 +16,9 @@ I tried to get fancy and use "Classes" and "Objects" for every scene, but it bec
 
 The breakthrough happened when I hit reset. I ditched the complex objects and started with simple shape blocks. I built the entire scroll logic using just rectangles to figure out the layering and triggers. Once the "skeleton" felt right, I started swapping the shapes for the real videos and images. Building it "inside-out" like this let me focus on the timing without getting distracted by the final art until the logic was bulletproof.
 
-> sketches go here
+> <img src="./sketches/0.jpg" height="225" >
+<img src="./sketches/1.jpg" height="225" >
+<img src="./sketches/2.jpg" height="225" >
 
 ---
 
