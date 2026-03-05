@@ -12,13 +12,17 @@ I knew a standard e-book wouldn't cut it. It would lose all that interactive "ch
 ## How did I actually go about it (and where did I get stuck)?
 To be honest, I had a rough start. My first plan was to just line up the comic pages and scroll through them, but that got messy fast. Interacting with scroll and images at the same time while trying to make things happen in a specific sequence (and not all at once) was a huge headache.
 
+<p align="center">
+  <img src="./sketches/0.jpg" height="225" />
+  <img src="./sketches/1.jpg" height="225" />
+  <img src="./sketches/2.jpg" height="225" />
+</p>
+
 I tried to get fancy and use "Classes" and "Objects" for every scene, but it became so overwhelming that I felt stuck. I was spending more time fighting the code hierarchy than actually building the story.
 
 The breakthrough happened when I hit reset. I ditched the complex objects and started with simple shape blocks. I built the entire scroll logic using just rectangles to figure out the layering and triggers. Once the "skeleton" felt right, I started swapping the shapes for the real videos and images. Building it "inside-out" like this let me focus on the timing without getting distracted by the final art until the logic was bulletproof.
 
-> <img src="./sketches/0.jpg" height="225" >
-<img src="./sketches/1.jpg" height="225" >
-<img src="./sketches/2.jpg" height="225" >
+
 
 ---
 
