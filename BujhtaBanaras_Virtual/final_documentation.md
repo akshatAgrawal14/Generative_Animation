@@ -44,7 +44,7 @@ But I didn't want it to *only* be about scrolling. I wanted to bring back that p
 
 ---
 
-## What are my Takwaways from this project?
+## What are my Takeaways from this project?
 This project was a massive reality check on how different tactile and digital mediums really are. In the physical world, making an interaction "intuitive" feels like second nature. On a screen, it’s a battle to replicate that same sense of discovery. I found that to make digital actions clear, I often had to "over-explain" with icons, which can sometimes kill the mystery I was trying to create.
 
 However, I realized the digital medium has a "secret weapon": Sound. I think adding audio could actually elevate this beyond what the physical book could ever do. While the project still needs a lot of fine-tuning to feel 100% effortless for a casual reader, I’m excited to keep working on it and use this digital version to take this story of Varanasi to a much wider audience.
